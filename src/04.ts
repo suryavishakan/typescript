@@ -34,7 +34,42 @@
 
 
 // default parameters
-function greet3(name: string = "guest"): void{
-    console.log(`hello, ${name}`);
+// function greet3(name: string = "guest"): void{
+//     console.log(`hello, ${name}`);
+// }
+// greet3(); 
+
+
+// never return type
+// throw error
+// infinite loop
+// function throwError(message : string): never{
+//     throw new Error(message);
+// }
+
+// throwError("someting went wrong");
+
+
+// function overloading
+// function combine(a: number, b: number) : number;
+// function combine(a: string, b: string) : string;
+// function combine(a: number | string, b: number | string) : number | string{
+//     if(typeof a === "number" && typeof b === "number"){
+//         return a + b;
+//     }else if(typeof a === "string" && typeof b === "string"){
+//         return a + " " + b;
+//     }else{
+//         throw new Error("something went wrong");
+//     }
+// }
+
+// console.log(combine("surya", "vishakan"));
+
+// 
+function greet() : string;
+function greet(name : string) : string;
+function greet(name?: string): string{
+    return `hello, ${name ?? "guest"}`;
 }
-greet3(); 
+
+console.log(greet());
