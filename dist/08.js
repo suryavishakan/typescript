@@ -24,11 +24,11 @@ function getUserDirection(direction) {
 getUserDirection(Direction.UP);
 var OrderStatus;
 (function (OrderStatus) {
-    OrderStatus[OrderStatus["DELIVERED"] = 0] = "DELIVERED";
-    OrderStatus[OrderStatus["RETURNED"] = 1] = "RETURNED";
-    OrderStatus[OrderStatus["PLACED"] = 2] = "PLACED";
-    OrderStatus[OrderStatus["PENDING"] = 3] = "PENDING";
-    OrderStatus[OrderStatus["CANCELLED"] = 4] = "CANCELLED";
+    OrderStatus[OrderStatus["DELIVERED"] = 1] = "DELIVERED";
+    OrderStatus["RETURNED"] = "RETURNED";
+    OrderStatus["PLACED"] = "PLACED";
+    OrderStatus["PENDING"] = "PENDING";
+    OrderStatus["CANCELLED"] = "CANCELLED";
 })(OrderStatus || (OrderStatus = {}));
 function getOrderStatus(status) {
     if (status === OrderStatus.DELIVERED) {
@@ -48,4 +48,5 @@ function getOrderStatus(status) {
     }
 }
 getOrderStatus(OrderStatus.RETURNED);
+console.log(OrderStatus.CANCELLED);
 export {};

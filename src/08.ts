@@ -24,11 +24,11 @@ getUserDirection(Direction.UP);
 
 
 enum OrderStatus{
-    DELIVERED,
-    RETURNED,
-    PLACED,
-    PENDING,
-    CANCELLED
+    DELIVERED = 1,
+    RETURNED = "RETURNED",
+    PLACED = "PLACED",
+    PENDING = "PENDING",
+    CANCELLED = "CANCELLED"
 }
 
 function getOrderStatus(status : OrderStatus) : void{
@@ -47,3 +47,5 @@ function getOrderStatus(status : OrderStatus) : void{
 
 
 getOrderStatus(OrderStatus.RETURNED);
+
+console.log(OrderStatus.CANCELLED); 
